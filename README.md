@@ -2,7 +2,7 @@
 biostats 626 midterm 1 Instruction
 
 ## Task 1 (Binary):
-Build a binary classifier to classify the activity of each time window into static (0) and dynamic (1). For this task, consider postural transitions as static (0).
+Build a binary classifier to classify the activity of each time window into static (0) and dynamic (1). For this task, consider postural transitions as static (0). I changed dynamic postures (1,2,3) to 1 and all other labels to 0.
 
 ### Baseline Algorithm: 
 Train test split with a test size of 0.3 is applied to the training data for future evaluation. The baseline model is a random forest classifier with n_estimators=100, max_depth=7. The accuracy of the prediction reaches 0.99914, which is extremely high. It seems that there is limited potential for improvement with this dataset.
@@ -12,7 +12,7 @@ I then tried different supervised approaches including logistic regression, logi
 
 
 ## Task 2 (Multi-class):
-Build a refined multi-class classifier to classify walking (1), walking_upstairs (2), walking_downstairs (3), sitting (4), standing (5), lying (6), and static postural transition (7)
+Build a refined multi-class classifier to classify walking (1), walking_upstairs (2), walking_downstairs (3), sitting (4), standing (5), lying (6), and static postural transition (7). I replaced transition postures (8,9,10,11,12) to 7 and left all other labels unchanged. 
 
 ### Baseline Algorithm:
 Train test split with a test size of 0.3 is applied to the training data for future evaluation. The baseline model is a logistic regression model, which has an accuracy of 0.9803 when evaluating on the test data from train-test-split.
